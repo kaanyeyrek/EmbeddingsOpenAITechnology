@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1FE27E2A2A4090001011CA /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = BA1FE27D2A2A4090001011CA /* OpenAISwift */; };
+		BAAA9D6E2A2A300700325773 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = BAAA9D6D2A2A300700325773 /* OpenAI */; };
 		BAED0D8C2A23D441006DF820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED0D8B2A23D441006DF820 /* AppDelegate.swift */; };
 		BAED0D8E2A23D441006DF820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED0D8D2A23D441006DF820 /* SceneDelegate.swift */; };
-		BAED0D902A23D441006DF820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED0D8F2A23D441006DF820 /* ViewController.swift */; };
+		BAED0D902A23D441006DF820 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED0D8F2A23D441006DF820 /* HomeViewController.swift */; };
 		BAED0D932A23D441006DF820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAED0D912A23D441006DF820 /* Main.storyboard */; };
 		BAED0D952A23D442006DF820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAED0D942A23D442006DF820 /* Assets.xcassets */; };
 		BAED0D982A23D442006DF820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAED0D962A23D442006DF820 /* LaunchScreen.storyboard */; };
+		BAED0DA02A23D987006DF820 /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED0D9F2A23D987006DF820 /* OpenAIManager.swift */; };
+		BAED0DA42A23DCA9006DF820 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BAED0DA32A23DCA9006DF820 /* Alamofire */; };
+		BAED0DA72A23DF06006DF820 /* EmbeddingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED0DA62A23DF06006DF820 /* EmbeddingResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BAED0D882A23D441006DF820 /* EmbedingAIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmbedingAIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAED0D8B2A23D441006DF820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAED0D8D2A23D441006DF820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BAED0D8F2A23D441006DF820 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAED0D8F2A23D441006DF820 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BAED0D922A23D441006DF820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAED0D942A23D442006DF820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAED0D972A23D442006DF820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAED0D992A23D442006DF820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAED0D9F2A23D987006DF820 /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
+		BAED0DA62A23DF06006DF820 /* EmbeddingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddingResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAA9D6E2A2A300700325773 /* OpenAI in Frameworks */,
+				BA1FE27E2A2A4090001011CA /* OpenAISwift in Frameworks */,
+				BAED0DA42A23DCA9006DF820 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,57 @@
 		BAED0D8A2A23D441006DF820 /* EmbedingAIProject */ = {
 			isa = PBXGroup;
 			children = (
-				BAED0D8B2A23D441006DF820 /* AppDelegate.swift */,
-				BAED0D8D2A23D441006DF820 /* SceneDelegate.swift */,
-				BAED0D8F2A23D441006DF820 /* ViewController.swift */,
-				BAED0D912A23D441006DF820 /* Main.storyboard */,
+				BAED0DAA2A23DF4C006DF820 /* Storyboard */,
+				BAED0DA12A23D9C7006DF820 /* Network */,
+				BAED0DA52A23DEF6006DF820 /* Model */,
+				BAED0DA82A23DF1E006DF820 /* Core */,
+				BAED0DA92A23DF2F006DF820 /* Application */,
 				BAED0D942A23D442006DF820 /* Assets.xcassets */,
-				BAED0D962A23D442006DF820 /* LaunchScreen.storyboard */,
 				BAED0D992A23D442006DF820 /* Info.plist */,
 			);
 			path = EmbedingAIProject;
+			sourceTree = "<group>";
+		};
+		BAED0DA12A23D9C7006DF820 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BAED0D9F2A23D987006DF820 /* OpenAIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BAED0DA52A23DEF6006DF820 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAED0DA62A23DF06006DF820 /* EmbeddingResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAED0DA82A23DF1E006DF820 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BAED0D8F2A23D441006DF820 /* HomeViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BAED0DA92A23DF2F006DF820 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BAED0D8D2A23D441006DF820 /* SceneDelegate.swift */,
+				BAED0D8B2A23D441006DF820 /* AppDelegate.swift */,
+				BAED0D962A23D442006DF820 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BAED0DAA2A23DF4C006DF820 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BAED0D912A23D441006DF820 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +135,11 @@
 			dependencies = (
 			);
 			name = EmbedingAIProject;
+			packageProductDependencies = (
+				BAED0DA32A23DCA9006DF820 /* Alamofire */,
+				BAAA9D6D2A2A300700325773 /* OpenAI */,
+				BA1FE27D2A2A4090001011CA /* OpenAISwift */,
+			);
 			productName = EmbedingAIProject;
 			productReference = BAED0D882A23D441006DF820 /* EmbedingAIProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +168,11 @@
 				Base,
 			);
 			mainGroup = BAED0D7F2A23D441006DF820;
+			packageReferences = (
+				BAED0DA22A23DCA9006DF820 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BAAA9D6C2A2A300700325773 /* XCRemoteSwiftPackageReference "OpenAI" */,
+				BA1FE27C2A2A4090001011CA /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = BAED0D892A23D441006DF820 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAED0D902A23D441006DF820 /* ViewController.swift in Sources */,
+				BAED0D902A23D441006DF820 /* HomeViewController.swift in Sources */,
+				BAED0DA02A23D987006DF820 /* OpenAIManager.swift in Sources */,
 				BAED0D8C2A23D441006DF820 /* AppDelegate.swift in Sources */,
+				BAED0DA72A23DF06006DF820 /* EmbeddingResponse.swift in Sources */,
 				BAED0D8E2A23D441006DF820 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +422,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA1FE27C2A2A4090001011CA /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		BAAA9D6C2A2A300700325773 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+		BAED0DA22A23DCA9006DF820 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA1FE27D2A2A4090001011CA /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA1FE27C2A2A4090001011CA /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		BAAA9D6D2A2A300700325773 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAAA9D6C2A2A300700325773 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+		BAED0DA32A23DCA9006DF820 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAED0DA22A23DCA9006DF820 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BAED0D802A23D441006DF820 /* Project object */;
 }

@@ -1,9 +1,6 @@
 //
 //  SceneDelegate.swift
 //  EmbedingAIProject
-//
-//  Created by orfeteknoloji on 28.05.2023.
-//
 
 import UIKit
 
